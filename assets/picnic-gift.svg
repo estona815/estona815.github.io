@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 600 600" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">꽃 태그를 단 작은 리본 선물</title>
+  <desc id="desc">크림색 선물 상자에 분홍 리본과 꽃 모양 태그를 두르고 작은 꽃으로 장식한 직접 제작한 일러스트.</desc>
+  <defs>
+    <linearGradient id="box" x1="188" y1="294" x2="379" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF4D9"/><stop offset="1" stop-color="#F1DCB3"/></linearGradient>
+    <linearGradient id="ribbon" x1="278" y1="252" x2="322" y2="494" gradientUnits="userSpaceOnUse"><stop stop-color="#E5ABC0"/><stop offset="1" stop-color="#D28EA5"/></linearGradient>
+    <pattern id="dots" width="35" height="35" patternUnits="userSpaceOnUse"><circle cx="17.5" cy="17.5" r="2.5" fill="#C7A679" opacity=".25"/></pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="9" result="blur"/><feOffset in="blur" dx="0" dy="10" result="offset"/><feFlood flood-color="#AA795C" flood-opacity=".13"/><feComposite in2="offset" operator="in" result="shade"/><feMerge><feMergeNode in="shade"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <g id="flower"><path d="M0-14C-11-31 11-31 0-14C15-29 29-8 11-5C33 0 22 20 10 8C23 29-2 33-1 15C-9 34-29 18-12 6C-32 12-28-14-11-7C-26-24-4-31 0-14Z" fill="#FFF8E5" stroke="#A17A60" stroke-width="1.9"/><circle r="8" fill="#EBC27D" stroke="#A17A60" stroke-width="1.6"/></g>
+  </defs>
+  <ellipse cx="306" cy="501" rx="175" ry="23" fill="#A17961" opacity=".09"/>
+  <path d="M116 285C128 181 218 116 317 132C421 148 491 223 483 325C474 423 400 482 291 479C183 477 104 395 116 285Z" fill="#F5E4DA" opacity=".53"/>
+  <path d="M104 362C54 307 75 234 110 236C146 238 137 272 116 265C87 257 105 204 151 183" stroke="#D5A8AA" stroke-width="2.6" stroke-dasharray="3 10" stroke-linecap="round"/>
+  <g transform="rotate(-7 306 343)" filter="url(#shadow)" stroke-linejoin="round">
+    <rect x="171" y="293" width="273" height="191" rx="10" fill="url(#box)" stroke="#9C7558" stroke-width="2.8"/>
+    <rect x="171" y="293" width="273" height="191" rx="10" fill="url(#dots)"/>
+    <path d="M181 467H434M181 317V457M434 317V457" stroke="#D5B687" stroke-width="1.4" stroke-dasharray="2 6"/>
+    <path d="M283 295H333V484H283Z" fill="url(#ribbon)" stroke="#AB7587" stroke-width="2.1"/>
+    <path d="M291 301V476M325 301V476" stroke="#F0C2D0" stroke-width="1.7"/>
+    <rect x="158" y="265" width="299" height="57" rx="8" fill="#F8E7C0" stroke="#9C7558" stroke-width="2.8"/>
+    <path d="M168 276H447" stroke="#FFF5DF" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M279 265H337V322H279Z" fill="#E0A5B9" stroke="#AB7587" stroke-width="2"/>
+    <path d="M289 270V317M327 270V317" stroke="#F3CAD5" stroke-width="1.8"/>
+    <path d="M298 265C262 264 207 234 220 201C230 174 273 184 291 217C303 240 309 253 309 264Z" fill="#E7B4C6" stroke="#AB7587" stroke-width="2.6"/>
+    <path d="M308 265C340 257 393 218 372 190C356 166 319 188 310 220C305 237 305 254 308 265Z" fill="#E7B4C6" stroke="#AB7587" stroke-width="2.6"/>
+    <path d="M297 255C276 232 256 213 239 211C224 210 226 232 249 242C263 249 283 253 297 255Z" fill="#CF91AA" stroke="#AB7587" stroke-width="1.6"/>
+    <path d="M314 254C330 227 344 206 358 204C375 201 364 226 345 239C334 246 323 252 314 254Z" fill="#CF91AA" stroke="#AB7587" stroke-width="1.6"/>
+    <path d="M293 264L256 339L278 333L286 356L311 270M313 267L354 334L360 312L384 318L326 257" fill="#E2A6BC" stroke="#AB7587" stroke-width="2.2"/>
+    <path d="M293 254C301 249 316 247 323 254L325 270C316 279 302 278 293 271Z" fill="#EABACB" stroke="#AB7587" stroke-width="2.2"/>
+    <path d="M313 277C336 291 351 306 359 324" stroke="#AE8C68" stroke-width="2" stroke-linecap="round"/>
+    <g transform="rotate(14 371 353)">
+      <path d="M348 323H389L403 343V398H348Z" fill="#FFFBEF" stroke="#AC8966" stroke-width="2"/>
+      <circle cx="375" cy="335" r="3.5" fill="#ECD6B4" stroke="#AC8966" stroke-width="1.4"/>
+      <use href="#flower" xlink:href="#flower" transform="translate(376 365) scale(.55)"/>
+      <path d="M362 386H389" stroke="#D7BCA0" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g transform="translate(128 444) rotate(-24)">
+    <path d="M0 0L9 55" stroke="#A6AF8F" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M5 31C-14 30-20 14-11 13C-2 12 4 23 5 31ZM7 39C29 34 34 18 22 19C13 20 8 31 7 39Z" fill="#C7CFB4" stroke="#A6AF8F" stroke-width="1.7"/>
+    <use href="#flower" xlink:href="#flower" transform="scale(.8)"/>
+  </g>
+  <use href="#flower" xlink:href="#flower" transform="translate(471 204) rotate(12) scale(.66)"/>
+  <use href="#flower" xlink:href="#flower" transform="translate(202 123) rotate(-13) scale(.48)"/>
+  <path d="M411 123V141M402 132H420M481 376V391M473.5 383.5H488.5M136 153V166M129.5 159.5H142.5" stroke="#BE9574" stroke-width="2.3" stroke-linecap="round"/>
+  <circle cx="467" cy="276" r="4" fill="#D5A1B0"/><circle cx="328" cy="107" r="4" fill="#D9BD8D"/><circle cx="100" cy="400" r="3.5" fill="#BCC9AC"/>
+</svg>

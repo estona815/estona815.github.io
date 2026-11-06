@@ -1,0 +1,26 @@
+{
+  "version": "0.2",
+  "id": "iyiy-chiikawa-fan-reward-v1",
+  "mode": "preview",
+  "store": {
+    "name": "IYIY 스마트스토어",
+    "url": "https://smartstore.naver.com/iyiy"
+  },
+  "discountPercent": 5,
+  "threshold": {
+    "operator": "gt",
+    "score": 90
+  },
+  "requiredQuestionCount": 20,
+  "startsAt": null,
+  "endsAt": null,
+  "couponValidityDays": null,
+  "minimumOrderAmount": null,
+  "maximumDiscountAmount": null,
+  "issuanceLimit": null,
+  "perCustomerLimit": null,
+  "couponUrl": null,
+  "claimEndpoint": null,
+  "couponCode": null,
+  "provider": null
+}

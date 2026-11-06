@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400" viewBox="0 0 600 400" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">꽃 인장과 리본이 달린 소풍 성적표</title>
+  <desc id="desc">크림색 수료증과 장미색 리본, 꽃과 종이 조각으로 축하하는 직접 제작한 일러스트.</desc>
+  <defs>
+    <linearGradient id="paper" x1="207" y1="106" x2="372" y2="317" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFDF6"/><stop offset="1" stop-color="#FCF0D9"/></linearGradient>
+    <filter id="shadow" x="-25%" y="-30%" width="160%" height="185%"><feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/><feOffset in="blur" dx="0" dy="8" result="offset"/><feFlood flood-color="#9C725E" flood-opacity=".13"/><feComposite in2="offset" operator="in" result="shade"/><feMerge><feMergeNode in="shade"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <g id="flower"><path d="M0-13C-10-28 10-28 0-13C13-26 26-8 11-5C30 0 21 17 9 8C21 25-1 31-1 14C-8 30-27 16-11 6C-29 10-25-11-10-6C-24-22-4-28 0-13Z" fill="#FFF8E5" stroke="#A47B61" stroke-width="1.8"/><circle r="7" fill="#E8C683" stroke="#A47B61" stroke-width="1.5"/></g>
+  </defs>
+  <ellipse cx="306" cy="341" rx="188" ry="17" fill="#A77D65" opacity=".08"/>
+  <path d="M120 207C120 128 211 74 307 79C400 82 482 147 473 220C462 307 376 342 281 325C181 307 116 286 120 207Z" fill="#F5E4DB" opacity=".5"/>
+  <path d="M65 223C83 192 121 194 119 217C116 240 85 226 96 202C105 183 116 170 116 147" stroke="#D4AAAE" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+  <g transform="rotate(-7 303 208)" filter="url(#shadow)">
+    <path d="M160 101H445V309H160C149 309 140 300 140 289V120C140 109 148 101 160 101Z" fill="#E8C9C5" stroke="#9B755F" stroke-width="2.4"/>
+    <rect x="150" y="93" width="289" height="211" rx="7" fill="url(#paper)" stroke="#9B755F" stroke-width="2.5"/>
+    <path d="M173 118H416V278H173Z" stroke="#D6B58A" stroke-width="1.8"/>
+    <path d="M179 124H410V272H179Z" stroke="#E5CCAA" stroke-width="1.2" stroke-dasharray="2 6"/>
+    <path d="M172 131C182 131 186 127 186 118M403 118C403 128 407 131 416 131M173 264C182 264 186 268 186 278M404 278C404 268 407 264 416 264" stroke="#BD9772" stroke-width="1.7" stroke-linecap="round"/>
+    <path d="M244 153H345" stroke="#C18D9B" stroke-width="8" stroke-linecap="round"/>
+    <path d="M212 183H377M230 200H359M221 217H368" stroke="#D1B79B" stroke-width="4" stroke-linecap="round" opacity=".62"/>
+    <path d="M226 249C234 234 239 252 247 241C251 236 253 250 261 243C266 239 271 242 277 241" stroke="#AB8B73" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M327 255H370" stroke="#D6BDA2" stroke-width="2" stroke-linecap="round"/>
+    <path d="M366 269L342 339L364 331L376 349L390 281L398 350L412 332L432 342L408 266" fill="#D99AAD" stroke="#AE7787" stroke-width="2.1" stroke-linejoin="round"/>
+    <path d="M373 278L360 325M401 277L412 326" stroke="#EEC0CD" stroke-width="2" stroke-linecap="round"/>
+    <path d="M388 234L398 240L410 240L417 250L428 256L428 269L434 280L426 290L423 302L410 306L400 315L388 311L376 315L366 306L353 302L350 290L342 280L348 269L348 256L359 250L366 240L378 240Z" fill="#E9C58B" stroke="#A9865D" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="388" cy="275" r="29" fill="#FAE6B9" stroke="#CCA573" stroke-width="1.5"/>
+    <circle cx="388" cy="275" r="23" stroke="#D5B784" stroke-width="1.2" stroke-dasharray="2 4"/>
+    <use href="#flower" xlink:href="#flower" transform="translate(388 275) scale(.7)"/>
+  </g>
+  <g stroke="#A3AD8F" stroke-width="2.2" stroke-linecap="round">
+    <path d="M130 318C119 291 104 271 92 246M122 302C107 299 96 290 92 277M117 288C124 276 124 263 118 254"/>
+    <path d="M478 303C484 281 493 264 508 246M483 283C471 278 467 268 469 257M489 269C504 270 515 263 520 253"/>
+  </g>
+  <g fill="#C4CEB3" stroke="#A3AD8F" stroke-width="1.5"><path d="M105 285C81 286 77 269 91 269C98 270 101 278 105 285Z"/><path d="M121 275C106 260 112 248 121 252C127 256 125 266 121 275Z"/><path d="M481 276C463 277 457 262 469 259C476 260 478 268 481 276Z"/><path d="M499 264C502 247 518 240 521 251C520 260 509 264 499 264Z"/></g>
+  <use href="#flower" xlink:href="#flower" transform="translate(89 245) scale(.68) rotate(-12)"/>
+  <use href="#flower" xlink:href="#flower" transform="translate(508 239) scale(.55) rotate(18)"/>
+  <path d="M160 73L166 61M455 99L468 94M230 65L225 51M505 180L517 185" stroke="#D297A9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M96 108L104 114M401 49L406 59M519 116L510 128" stroke="#D8BC83" stroke-width="4" stroke-linecap="round"/>
+  <path d="M300 53V68M292.5 60.5H307.5M482 63V77M475 70H489M78 163V175M72 169H84" stroke="#B59071" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="192" cy="64" r="4" fill="#BCCBA8"/><circle cx="358" cy="59" r="3.5" fill="#DAB4BC"/><circle cx="466" cy="185" r="3" fill="#E0C38F"/>
+</svg>

@@ -1,0 +1,689 @@
+{
+  "version": "0.1.2",
+  "language": "ko",
+  "status": "published",
+  "reviewedAt": "2026-11-07",
+  "note": "공식 공개 자료를 참고해 직접 작성한 비공식 팬 퀴즈. 난이도는 편집상 분류이며 실제 정답률로 검증된 값이 아닙니다.",
+  "questions": [
+    {
+      "id": "ck001",
+      "category": "작품",
+      "difficulty": 1,
+      "question": "치이카와를 탄생시킨 작가는 누구일까?",
+      "options": [
+        "나가노",
+        "아오야마 고쇼",
+        "오다 에이이치로",
+        "다카하시 루미코"
+      ],
+      "answerIndex": 0,
+      "explanation": "치이카와는 일러스트레이터 나가노의 만화예요.",
+      "sourceId": "bandai_intro"
+    },
+    {
+      "id": "ck002",
+      "category": "작품",
+      "difficulty": 1,
+      "question": "‘치이카와’라는 이름에 담긴 뜻은?",
+      "options": [
+        "아주 빠른 친구",
+        "작고 귀여운 녀석",
+        "반짝이는 밤하늘",
+        "커다란 모험가"
+      ],
+      "answerIndex": 1,
+      "explanation": "‘작고 귀여운 녀석’이라는 일본어 표현에서 나왔어요.",
+      "sourceId": "global_home"
+    },
+    {
+      "id": "ck003",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "치이카와의 성격으로 가장 알맞은 것은?",
+      "options": [
+        "냉정한 독재자",
+        "무서움을 모르는 승부사",
+        "눈물이 많지만 다정한 친구",
+        "항상 화내는 심판"
+      ],
+      "answerIndex": 2,
+      "explanation": "공식 소개는 치이카와를 조금 울보지만 다정하다고 설명해요.",
+      "sourceId": "anime_characters"
+    },
+    {
+      "id": "ck004",
+      "category": "세계관",
+      "difficulty": 1,
+      "question": "치이카와가 생활비를 벌기 위해 하는 일은?",
+      "options": [
+        "우주선 조종",
+        "왕궁 경비",
+        "뉴스 진행",
+        "풀 뽑기와 토벌"
+      ],
+      "answerIndex": 3,
+      "explanation": "풀 뽑기나 토벌 같은 일을 하며 살아가요.",
+      "sourceId": "anime_characters"
+    },
+    {
+      "id": "ck005",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "‘야하!’, ‘우라!’가 떠오르는 친구는?",
+      "options": [
+        "우사기",
+        "시사",
+        "랏코",
+        "하치와레"
+      ],
+      "answerIndex": 0,
+      "explanation": "우사기의 대표적인 외침이에요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck006",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "긍정적인 태도로 치이카와를 북돋는 친구는?",
+      "options": [
+        "모몽가",
+        "하치와레",
+        "쿠리만쥬",
+        "노동 갑옷 아저씨"
+      ],
+      "answerIndex": 1,
+      "explanation": "하치와레는 밝고 다정한 친구예요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck007",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "커다랗고 복슬복슬한 꼬리가 특징인 친구는?",
+      "options": [
+        "시사",
+        "치이카와",
+        "모몽가",
+        "카니(헌책방)"
+      ],
+      "answerIndex": 2,
+      "explanation": "모몽가는 풍성한 꼬리를 가졌어요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck008",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "토벌에 능해서 치이카와 일행이 동경하는 존재는?",
+      "options": [
+        "카니(헌책방)",
+        "라멘 갑옷 아저씨",
+        "모몽가",
+        "랏코"
+      ],
+      "answerIndex": 3,
+      "explanation": "랏코는 토벌에 강한 동경의 대상이에요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck009",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "술과 안주를 즐기는 모습이 익숙한 친구는?",
+      "options": [
+        "쿠리만쥬",
+        "하치와레",
+        "치이카와",
+        "카니(헌책방)"
+      ],
+      "answerIndex": 0,
+      "explanation": "쿠리만쥬는 술과 안주를 즐겨요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck010",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "카니가 사고파는 물건은?",
+      "options": [
+        "보석",
+        "헌책",
+        "자동차",
+        "낚싯대"
+      ],
+      "answerIndex": 1,
+      "explanation": "카니는 ‘헌책방’으로도 불려요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck011",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "포셰트 갑옷 아저씨가 좋아하는 것은?",
+      "options": [
+        "시끄러운 경보",
+        "어려운 수식",
+        "귀여운 것",
+        "무서운 괴담만"
+      ],
+      "answerIndex": 2,
+      "explanation": "공식 소개에서 귀여운 것을 좋아한다고 해요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck012",
+      "category": "세계관",
+      "difficulty": 1,
+      "question": "일거리 접수를 담당하는 갑옷 아저씨는?",
+      "options": [
+        "라멘 갑옷 아저씨",
+        "포셰트 갑옷 아저씨",
+        "왕관 갑옷 아저씨",
+        "노동 갑옷 아저씨"
+      ],
+      "answerIndex": 3,
+      "explanation": "노동 갑옷 아저씨는 노동 접수를 맡아요.",
+      "sourceId": "anime_work_kuri"
+    },
+    {
+      "id": "ck013",
+      "category": "세계관",
+      "difficulty": 1,
+      "question": "가게 ‘로(郎)’의 대표 음식은?",
+      "options": [
+        "라멘",
+        "피자",
+        "초밥",
+        "햄버거"
+      ],
+      "answerIndex": 0,
+      "explanation": "‘로’는 라멘 가게예요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck014",
+      "category": "캐릭터",
+      "difficulty": 1,
+      "question": "‘로(郎)’에서 보조로 일하는 친구는?",
+      "options": [
+        "우사기",
+        "시사",
+        "모몽가",
+        "랏코"
+      ],
+      "answerIndex": 1,
+      "explanation": "시사는 라멘 가게에서 일해요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck015",
+      "category": "캐릭터",
+      "difficulty": 2,
+      "question": "공식 소개에서 하치와레는 어떻게 설명될까?",
+      "options": [
+        "고양이로 확정되어 있다",
+        "강아지로 확정되어 있다",
+        "고양이처럼 보이지만 종은 단정하지 않는다",
+        "펭귄으로 확정되어 있다"
+      ],
+      "answerIndex": 2,
+      "explanation": "고양이 같은 외모와 종의 확정은 달라요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck016",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "공식 소개에서 우사기의 거처는?",
+      "options": [
+        "시청 옥상",
+        "라멘 가게 지하",
+        "역 안의 사무실",
+        "어디인지 알려지지 않음"
+      ],
+      "answerIndex": 3,
+      "explanation": "우사기가 사는 곳은 알려지지 않았어요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck017",
+      "category": "캐릭터",
+      "difficulty": 2,
+      "question": "카니에게 머리띠를 선물한 친구는?",
+      "options": [
+        "모몽가",
+        "시사",
+        "랏코",
+        "치이카와"
+      ],
+      "answerIndex": 0,
+      "explanation": "머리띠는 모몽가의 선물이에요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck018",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "랏코의 토벌 랭킹은?",
+      "options": [
+        "10위",
+        "1위",
+        "50위",
+        "100위"
+      ],
+      "answerIndex": 1,
+      "explanation": "랏코는 토벌 랭킹 1위예요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck019",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "쿠리만쥬가 가진 면허는?",
+      "options": [
+        "운전 면허",
+        "조리사 면허",
+        "음주 면허",
+        "수렵 면허"
+      ],
+      "answerIndex": 2,
+      "explanation": "쿠리만쥬는 음주 면허를 갖고 있어요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck020",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "시사가 합격한 어려운 자격시험은?",
+      "options": [
+        "풀 뽑기 검정 1급",
+        "라멘 조리사",
+        "토벌 관리사",
+        "슈퍼 아르바이터"
+      ],
+      "answerIndex": 3,
+      "explanation": "시사는 슈퍼 아르바이터 자격을 얻었어요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck021",
+      "category": "캐릭터",
+      "difficulty": 2,
+      "question": "랏코가 능숙하게 다루는 무기는?",
+      "options": [
+        "검",
+        "대포",
+        "부메랑",
+        "새총"
+      ],
+      "answerIndex": 0,
+      "explanation": "랏코는 검을 능숙하게 사용해요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck022",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "포셰트 갑옷 아저씨가 직접 만들어 파는 것은?",
+      "options": [
+        "라멘과 만두",
+        "직접 만든 잠옷",
+        "신문과 잡지",
+        "자동차와 자전거"
+      ],
+      "answerIndex": 1,
+      "explanation": "공식 글로벌 소개에 따르면 포셰트 갑옷 아저씨는 귀여운 것을 좋아하며, 손수 만든 잠옷을 팔아요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck023",
+      "category": "캐릭터",
+      "difficulty": 2,
+      "question": "카니의 머리띠 모양은?",
+      "options": [
+        "나비",
+        "별",
+        "게",
+        "왕관"
+      ],
+      "answerIndex": 2,
+      "explanation": "카니의 머리띠는 게 모양이에요.",
+      "sourceId": "global_characters"
+    },
+    {
+      "id": "ck024",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "풀 뽑기 검정에 합격하면 어떤 이점이 있을까?",
+      "options": [
+        "토벌 업무를 면제받는다",
+        "라멘 가게에서 바로 일할 수 있다",
+        "급수와 관계없이 같은 보수를 받는다",
+        "더 높은 보수를 받을 수 있다"
+      ],
+      "answerIndex": 3,
+      "explanation": "공식 Q&A는 검정 합격 후 더 많이 벌 수 있다고 설명해요.",
+      "sourceId": "global_home"
+    },
+    {
+      "id": "ck025",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "이 세계에서 타고 날아갈 수 있는 물고기는?",
+      "options": [
+        "개복치",
+        "금붕어",
+        "참치",
+        "가자미"
+      ],
+      "answerIndex": 0,
+      "explanation": "공식 Q&A에 하늘을 나는 개복치가 등장해요.",
+      "sourceId": "global_home"
+    },
+    {
+      "id": "ck026",
+      "category": "세계관",
+      "difficulty": 2,
+      "question": "공식 소개에 나오는 숲속의 무한 음식은?",
+      "options": [
+        "무한 피자",
+        "무한 흰쌀밥",
+        "무한 초밥",
+        "무한 팝콘"
+      ],
+      "answerIndex": 1,
+      "explanation": "숲속에는 끝없이 나오는 흰쌀밥이 있어요.",
+      "sourceId": "global_home"
+    },
+    {
+      "id": "ck027",
+      "category": "작품",
+      "difficulty": 2,
+      "question": "애니메이션의 엔딩 주제가 제목은?",
+      "options": [
+        "밤하늘 산책",
+        "토벌 일기",
+        "혼잣말(ひとりごつ)",
+        "내일의 라멘"
+      ],
+      "answerIndex": 2,
+      "explanation": "공식 엔딩 주제가는 ‘ひとりごつ’예요.",
+      "sourceId": "anime_main"
+    },
+    {
+      "id": "ck028",
+      "category": "작품",
+      "difficulty": 2,
+      "question": "엔딩 주제가 ‘혼잣말’을 부르는 캐릭터는?",
+      "options": [
+        "우사기",
+        "모몽가",
+        "랏코",
+        "하치와레"
+      ],
+      "answerIndex": 3,
+      "explanation": "하치와레가 노래하고, 성우는 다나카 마코토예요.",
+      "sourceId": "anime_main"
+    },
+    {
+      "id": "ck029",
+      "category": "작품",
+      "difficulty": 2,
+      "question": "치이카와 만화가 출발한 SNS는?",
+      "options": [
+        "X(옛 트위터)",
+        "틱톡",
+        "링크드인",
+        "핀터레스트"
+      ],
+      "answerIndex": 0,
+      "explanation": "반다이 공식 소개는 X에서 시작된 만화라고 설명해요.",
+      "sourceId": "bandai_intro"
+    },
+    {
+      "id": "ck030",
+      "category": "작품",
+      "difficulty": 2,
+      "question": "일본에서 치이카와 단행본을 펴내는 출판사는?",
+      "options": [
+        "슈에이샤",
+        "고단샤",
+        "쇼가쿠칸",
+        "하쿠센샤"
+      ],
+      "answerIndex": 1,
+      "explanation": "일본 단행본은 고단샤에서 출간해요.",
+      "sourceId": "bandai_intro"
+    },
+    {
+      "id": "ck031",
+      "category": "작품",
+      "difficulty": 2,
+      "question": "일본에서 애니메이션을 처음 방송한 프로그램은?",
+      "options": [
+        "뮤직 스테이션",
+        "뉴스 제로",
+        "메자마시 TV",
+        "철완 DASH"
+      ],
+      "answerIndex": 2,
+      "explanation": "후지TV 계열 ‘메자마시 TV’에서 방송을 시작했어요.",
+      "sourceId": "anime_start"
+    },
+    {
+      "id": "ck032",
+      "category": "작품",
+      "difficulty": 2,
+      "question": "일본 TV 애니메이션 첫 방송 연도는?",
+      "options": [
+        "2018년",
+        "2020년",
+        "2024년",
+        "2022년"
+      ],
+      "answerIndex": 3,
+      "explanation": "첫 방송은 2022년 4월 4일이에요.",
+      "sourceId": "anime_start"
+    },
+    {
+      "id": "ck033",
+      "category": "세계관",
+      "difficulty": 3,
+      "question": "‘고블린’ 편에서 치이카와 일행이 붙잡히는 계기가 된 음식은?",
+      "options": [
+        "버섯",
+        "도토리",
+        "사과",
+        "물고기"
+      ],
+      "answerIndex": 0,
+      "explanation": "숲에서 먹던 버섯은 고블린들의 것이었어요. 주인에게 들킨 일행은 지하감옥에 갇히게 돼요.",
+      "sourceId": "fod_story_guide"
+    },
+    {
+      "id": "ck034",
+      "category": "캐릭터",
+      "difficulty": 3,
+      "question": "고블린의 지하감옥에서 치이카와 일행과 친해진 존재는?",
+      "options": [
+        "모몽가",
+        "오데",
+        "시사",
+        "카니(헌책방)"
+      ],
+      "answerIndex": 1,
+      "explanation": "일행은 지하감옥에서 함께 붙잡혀 있던 오데를 만나 친해져요. 이후 힘을 모아 탈출을 시도해요.",
+      "sourceId": "fod_story_guide"
+    },
+    {
+      "id": "ck035",
+      "category": "세계관",
+      "difficulty": 3,
+      "question": "‘검은 별똥별’ 편에서 같은 하루가 반복되는 일과 관련된 물건은?",
+      "options": [
+        "카메라",
+        "찻잔",
+        "알람 시계",
+        "머리띠"
+      ],
+      "answerIndex": 2,
+      "explanation": "새 알람 시계를 산 뒤 같은 날이 반복돼요. 치이카와는 시계 안의 검은 별똥별을 원인으로 의심해요.",
+      "sourceId": "fod_story_guide"
+    },
+    {
+      "id": "ck036",
+      "category": "작품",
+      "difficulty": 3,
+      "question": "엔딩곡 ‘혼잣말’의 작사가는?",
+      "options": [
+        "오자와 아리",
+        "요네즈 켄시",
+        "다나카 마코토",
+        "나가노"
+      ],
+      "answerIndex": 3,
+      "explanation": "원작자인 나가노가 가사를 썼어요.",
+      "sourceId": "anime_main"
+    },
+    {
+      "id": "ck037",
+      "category": "세계관",
+      "difficulty": 3,
+      "question": "‘파자마 파티즈’ 편에서 치이카와 일행이 토벌에 나선 상대는?",
+      "options": [
+        "하얀 새",
+        "커다란 개구리",
+        "검은 물고기",
+        "붉은 도마뱀"
+      ],
+      "answerIndex": 0,
+      "explanation": "이 이야기에는 노래와 춤뿐 아니라 하얀 새를 토벌하는 장면도 있어요. 제작진 인터뷰에서도 이 장면을 소개해요.",
+      "sourceId": "fuji_producer_interview"
+    },
+    {
+      "id": "ck038",
+      "category": "작품",
+      "difficulty": 3,
+      "question": "일본 애니메이션에서 우사기를 연기한 성우는?",
+      "options": [
+        "하나자와 카나",
+        "오자와 아리",
+        "이구치 유카",
+        "시마부쿠로 미유리"
+      ],
+      "answerIndex": 1,
+      "explanation": "우사기의 일본 성우는 오자와 아리예요.",
+      "sourceId": "anime_main"
+    },
+    {
+      "id": "ck039",
+      "category": "작품",
+      "difficulty": 3,
+      "question": "하치와레가 ‘혼잣말’을 선보인 애니메이션 화수는?",
+      "options": [
+        "1화",
+        "7화",
+        "11화",
+        "20화"
+      ],
+      "answerIndex": 2,
+      "explanation": "공식 노래방 배포 공지에서 11화의 노래로 소개해요.",
+      "sourceId": "anime_song"
+    },
+    {
+      "id": "ck040",
+      "category": "캐릭터",
+      "difficulty": 3,
+      "question": "공식 캐스트 소개의 파자마 파티즈 네 색에 없는 것은?",
+      "options": [
+        "초록",
+        "분홍",
+        "보라",
+        "파랑"
+      ],
+      "answerIndex": 3,
+      "explanation": "공식 소개의 네 색은 초록·분홍·보라·하양이에요.",
+      "sourceId": "anime_pajama"
+    }
+  ],
+  "sources": [
+    {
+      "id": "bandai_intro",
+      "title": "반다이 공식 치이카와 작품 소개",
+      "url": "https://www.bandai.co.jp/character/chiikawa.php",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "global_home",
+      "title": "치이카와 글로벌 공식 Q&A",
+      "url": "https://www.chiikawaofficial.com/home",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_characters",
+      "title": "치이카와 애니메이션 공식 캐릭터 소개",
+      "url": "https://www.anime-chiikawa.jp/chara.html",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "global_characters",
+      "title": "치이카와 글로벌 공식 캐릭터 소개",
+      "url": "https://www.chiikawaofficial.com/characters",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_main",
+      "title": "치이카와 애니메이션 공식 스태프·캐스트·주제가",
+      "url": "https://www.anime-chiikawa.jp/",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_rakko",
+      "title": "애니메이션 공식: 랏코 첫 등장 및 성우 코멘트",
+      "url": "https://www.anime-chiikawa.jp/info.html?k=entry%2F0323",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_pochette",
+      "title": "애니메이션 공식: 포셰트 갑옷 아저씨 소개",
+      "url": "https://www.anime-chiikawa.jp/info.html?k=entry%2F1006",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_work_kuri",
+      "title": "애니메이션 공식: 노동 갑옷 아저씨·쿠리만쥬 소개",
+      "url": "https://www.anime-chiikawa.jp/info.html?k=%2Fentry%2F20220728",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_start",
+      "title": "애니메이션 공식: 첫 방송 일정 안내",
+      "url": "https://www.anime-chiikawa.jp/info.html?k=%2Fentry%2F2022%2F04%2F01%2F0800",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_song",
+      "title": "애니메이션 공식: 혼잣말 노래방 배포 안내",
+      "url": "https://www.anime-chiikawa.jp/info.html?k=%2Fentry%2F0628",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "anime_pajama",
+      "title": "애니메이션 공식: 파자마 파티즈 캐스트 소개",
+      "url": "https://www.anime-chiikawa.jp/info.html?k=entry%2F240223",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "fod_story_guide",
+      "title": "후지TV FOD 공식: 고블린·검은 별똥별 등 이야기 소개",
+      "url": "https://news.fod.fujitv.co.jp/article/13558",
+      "accessedAt": "2026-11-01"
+    },
+    {
+      "id": "fuji_producer_interview",
+      "title": "후지TV 공식: 치이카와 프로듀서 인터뷰·파자마 파티즈 편",
+      "url": "https://www.fujitv.co.jp/company/fujitvwork/vol25.html",
+      "accessedAt": "2026-11-01"
+    }
+  ]
+}

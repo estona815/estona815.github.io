@@ -1,0 +1,14 @@
+{
+  "version": "1",
+  "network": "adsense",
+  "enabled": false,
+  "publisherId": "ca-pub-4959050536850164",
+  "siteApproved": false,
+  "approvedOrigin": null,
+  "privacyReady": true,
+  "consentReady": false,
+  "autoAdsDisabled": false,
+  "placements": {
+    "guide": null
+  }
+}

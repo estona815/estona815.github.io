@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9dbe0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="치이카와 덕력고사와 IYIY 스마트스토어의 5% 혜택 운영안. 예시 점수 확인과 운영 조건 초안을 작성할 수 있어요.">
+  <title>혜택 운영안 · 덕력고사</title>
+  <link rel="icon" href="./assets/flower.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/Jua-Regular-subset.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./assets/GowunDodum-Regular-subset.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./studio.css">
+</head>
+<body class="studio-body">
+  <a href="#studio-main" class="skip-link">본문으로 건너뛰기</a>
+  <div class="page studio-page">
+    <div class="paper">
+      <header class="paper-header">
+        <a class="brand studio-brand" href="./index.html"><img src="./assets/flower.svg" width="29" height="29" alt=""><span>혜택 운영안</span></a>
+        <a class="guide-link" href="./index.html">덕력고사로 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </header>
+      <main id="studio-main" tabindex="-1">
+        <section class="studio-intro">
+          <div>
+            <h1>덕력 보상을 준비해요</h1>
+            <p>95점·100점 달성자를 위한<br class="studio-mobile-break"> IYIY 5% 할인 혜택 초안.</p>
+          </div>
+          <span class="studio-draft-stamp" aria-label="운영 초안">운영<br>초안</span>
+        </section>
+
+        <p id="studio-load-status" class="studio-notice" role="status">혜택 정보를 불러오고 있어요.</p>
+
+        <section class="studio-section" aria-labelledby="preview-heading">
+          <div class="studio-section-heading"><span aria-hidden="true">01</span><h2 id="preview-heading">점수별 혜택 확인</h2></div>
+          <p class="studio-section-description" id="preview-description">예시 점수 · 실제 응시 기록 아님</p>
+          <fieldset id="preview-scores" class="studio-score-options" aria-describedby="preview-description" disabled>
+            <legend class="sr-only">미리 볼 예시 점수</legend>
+            <label><input type="radio" name="previewScore" value="90"><span>90<small>점</small></span></label>
+            <label><input type="radio" name="previewScore" value="95" checked><span>95<small>점</small></span></label>
+            <label><input type="radio" name="previewScore" value="100"><span>100<small>점</small></span></label>
+          </fieldset>
+
+          <div id="studio-preview" class="studio-ticket" aria-live="polite" aria-atomic="true">
+            <div class="studio-ticket-value"><span id="preview-store-name">IYIY</span><strong><span id="preview-percent">5</span><small>%</small></strong><span>할인 혜택</span></div>
+            <div class="studio-ticket-content"><span class="studio-preview-label">미리보기</span><h3 id="preview-title">점수별 안내를 준비하고 있어요</h3><p id="preview-message">쿠폰 발급은 준비 중이에요.</p><p id="preview-outcome" class="studio-ticket-detail">실제 쿠폰은 발급되지 않아요.</p></div>
+          </div>
+          <div class="studio-rule-line"><span>20문제 × 5점 · 90점 초과가 기준이에요.</span><a id="studio-store-link" href="https://smartstore.naver.com/iyiy" target="_blank" rel="noopener noreferrer">IYIY 구경하기 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6m0-6L10 14M10 5H5v14h14v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        </section>
+
+        <section class="studio-section studio-plan-section" aria-labelledby="plan-heading">
+          <div class="studio-section-heading"><span aria-hidden="true">02</span><h2 id="plan-heading">운영 조건 초안</h2></div>
+          <p class="studio-section-description">아직 정하지 않은 조건은 비워 두세요.</p>
+          <form id="studio-plan-form" novalidate>
+            <fieldset id="studio-plan-fields" class="studio-form-fields" disabled>
+              <legend class="sr-only">쿠폰 운영안 입력</legend>
+              <div class="studio-field studio-full-field">
+                <label for="delivery-approach">혜택 전달 방식</label>
+                <select id="delivery-approach" name="deliveryApproach" aria-describedby="delivery-help delivery-error">
+                  <option value="verified_manual">점수 확인 후 지정 발급</option>
+                  <option value="public_store_coupon">스토어 공개 쿠폰 안내</option>
+                </select>
+                <p class="studio-field-help" id="delivery-help">점수와 대상자를 확인한 뒤 판매자가 지정 발급하는 방식이에요. 실제 운영에는 별도 검증과 판매자센터 설정이 필요해요.</p>
+                <p class="studio-field-error" id="delivery-error"></p>
+              </div>
+              <div class="studio-field">
+                <label for="minimum-order">최소 주문금액 <span>선택</span></label>
+                <div class="studio-input-wrap"><input id="minimum-order" name="minimumOrderAmount" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="off" placeholder="미정" aria-describedby="minimum-order-help minimum-order-error"><span>원</span></div>
+                <p class="studio-field-help" id="minimum-order-help">1~10,000,000원 · 빈칸은 미정</p>
+                <p class="studio-field-error" id="minimum-order-error"></p>
+              </div>
+              <div class="studio-field">
+                <label for="maximum-discount">최대 할인금액 <span>선택</span></label>
+                <div class="studio-input-wrap"><input id="maximum-discount" name="maximumDiscountAmount" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="off" placeholder="미정" aria-describedby="maximum-discount-help maximum-discount-error"><span>원</span></div>
+                <p class="studio-field-help" id="maximum-discount-help">1~999,990원 · 빈칸은 미정</p>
+                <p class="studio-field-error" id="maximum-discount-error"></p>
+              </div>
+              <div class="studio-field">
+                <label for="validity-days">발급 후 사용기간 <span>선택</span></label>
+                <div class="studio-input-wrap"><input id="validity-days" name="couponValidityDays" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" autocomplete="off" placeholder="미정" aria-describedby="validity-days-help validity-days-error"><span>일</span></div>
+                <p class="studio-field-help" id="validity-days-help">이 초안에는 1~365일 입력 가능</p>
+                <p class="studio-field-error" id="validity-days-error"></p>
+              </div>
+              <div class="studio-field">
+                <label for="issuance-limit">전체 발급 예정 수량 <span>선택</span></label>
+                <div class="studio-input-wrap"><input id="issuance-limit" name="issuanceLimit" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="5" autocomplete="off" placeholder="미정" aria-describedby="issuance-limit-help issuance-limit-error"><span>매</span></div>
+                <p class="studio-field-help" id="issuance-limit-help">이 초안에는 1~10,000매 입력 가능</p>
+                <p class="studio-field-error" id="issuance-limit-error"></p>
+              </div>
+            </fieldset>
+
+            <p class="studio-form-note">최소 주문금액과 최대 할인금액을 모두 정하면, 최소 주문금액의 5%가 최대 할인금액 이내인지 확인해요.</p>
+            <div class="studio-save-note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h10l3 3v15H4V3h3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 3v6h8V3M8 21v-7h8v7" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><p><strong>운영안 저장은 판매자센터에 반영되지 않아요.</strong><span>이 브라우저에만 초안을 보관하거나 JSON 파일로 내려받아요.</span></p></div>
+            <div class="studio-form-actions"><button id="save-plan" type="submit" class="primary" disabled>운영안 저장</button><button id="download-plan" type="button" class="secondary" disabled>JSON 내려받기 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            <p id="plan-feedback" class="studio-feedback" role="status" aria-live="polite">입력하지 않은 금액·기간·수량은 미정으로 남아요.</p>
+          </form>
+        </section>
+
+        <details class="studio-operator-notes">
+          <summary>실제 발급 전에 확인할 내용 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <div class="studio-notes-content">
+            <p>실제 쿠폰은 아직 생성하지 않았어요. 이 페이지는 혜택의 운영 조건을 정리하는 초안이에요.</p>
+            <ul>
+              <li><strong>점수 제한을 지키려면</strong> 서버에서 20문제 답안을 채점하고 참가자와 발급 대상을 연결해야 해요. 현재 초안에는 서버 채점과 참가자 신원 확인이 구현되어 있지 않아, 브라우저 성적표를 실제 지급 자격의 증빙으로 쓸 수 없어요.</li>
+              <li><strong>공개 쿠폰을 안내하면</strong> 링크를 전달받은 다른 사람도 접근할 수 있어요. 공개 쿠폰은 95점 이상 응시자만 받을 수 있다고 보장하지 않아요.</li>
+              <li><strong>고객 지정 발급은</strong> 판매자센터에서 조회 가능한 대상 고객 등 조건을 확인해야 해요. 한 번에 지정할 수 있는 인원 제한과 네이버페이 약관 동의 조건이 있어, 모든 신규 참가자를 바로 지정할 수 있는 것은 아니에요.</li>
+              <li><strong>공개 커머스API에는</strong> 외부 퀴즈 점수에 따라 특정 네이버 계정으로 쿠폰을 직접 자동 발급하는 기능이 제공되지 않는다는 공식 기술지원 답변이 있어요. 지정 발급은 실제 판매자센터에서 진행해야 해요.</li>
+            </ul>
+            <p class="studio-notes-small">상품 범위·쿠폰 종류·운영 시작일·종료일·고객별 횟수는 미정이에요. 입력 범위는 이 초안의 검토용 범위이며, 실제 등록 가능 여부는 판매자센터에서 확인해 주세요.</p>
+            <div class="studio-source-links"><a href="https://help.sell.smartstore.naver.com/faq/content.help?faqId=4825" target="_blank" rel="noopener noreferrer">할인 설정 기준 · FAQ 4825</a><a href="https://help.sell.smartstore.naver.com/faq/content.help?faqId=4659" target="_blank" rel="noopener noreferrer">고객 지정 발급 · FAQ 4659</a><a href="https://github.com/commerce-api-naver/commerce-api/discussions/3309" target="_blank" rel="noopener noreferrer">자동 발급 지원 답변 · #3309</a></div>
+          </div>
+        </details>
+      </main>
+    </div>
+    <footer class="site-footer"><p>덕력고사 × IYIY · 혜택 운영 초안</p><p>예시 점수는 응시 기록과 별개로 표시돼요.</p></footer>
+  </div>
+  <noscript>운영안을 작성하려면 브라우저에서 JavaScript를 켜 주세요. 실제 쿠폰은 발급되지 않습니다.</noscript>
+  <script type="module" src="./studio.js"></script>
+</body>
+</html>

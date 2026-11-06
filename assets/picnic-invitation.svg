@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 600 600" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">꽃 인장이 있는 소풍 초대장</title>
+  <desc id="desc">분홍 체크 천 위에 펼친 크림색 편지와 꽃 인장, 작은 꽃과 점선으로 장식한 직접 제작한 문구 일러스트.</desc>
+  <defs>
+    <linearGradient id="paper" x1="252" y1="106" x2="344" y2="449" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFDF6"/><stop offset="1" stop-color="#FFF3DD"/></linearGradient>
+    <linearGradient id="envelope" x1="305" y1="279" x2="305" y2="481" gradientUnits="userSpaceOnUse"><stop stop-color="#F8DADE"/><stop offset="1" stop-color="#EFB8C7"/></linearGradient>
+    <pattern id="gingham" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M0 10.5H42M10.5 0V42" stroke="#EAC8CA" stroke-width="21" opacity=".46"/></pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="9" result="blur"/><feOffset in="blur" dx="0" dy="10" result="offset"/><feFlood flood-color="#9D6C58" flood-opacity=".12"/><feComposite in2="offset" operator="in" result="shade"/><feMerge><feMergeNode in="shade"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <g id="daisy"><path d="M0-14C-10-31 10-31 0-14C13-29 25-11 10-7C31-7 26 14 10 7C25 24 5 34 0 15C-7 34-25 21-10 7C-30 15-30-7-10-7C-26-15-9-30 0-14Z" fill="#FFF9E8" stroke="#98715B" stroke-width="1.9" stroke-linejoin="round"/><circle r="7.5" fill="#E8BE7C" stroke="#98715B" stroke-width="1.7"/></g>
+    <g id="spark" stroke="#B6886D" stroke-width="2.3" stroke-linecap="round"><path d="M0-7V7M-7 0H7"/></g>
+  </defs>
+  <ellipse cx="302" cy="489" rx="207" ry="27" fill="#BD8B73" opacity=".08"/>
+  <path d="M90 233C91 144 194 93 291 106C407 122 491 170 508 270C526 376 444 465 322 475C197 484 88 372 90 233Z" fill="#F8E6DB" opacity=".45"/>
+  <g transform="rotate(-9 296 360)">
+    <rect x="99" y="253" width="390" height="247" rx="23" fill="#FBECE7"/>
+    <rect x="99" y="253" width="390" height="247" rx="23" fill="url(#gingham)"/>
+    <rect x="108" y="262" width="372" height="229" rx="16" stroke="#DDB6A7" stroke-width="1.5" stroke-dasharray="3 7"/>
+    <path d="M116 500L112 510M135 500L131 510M155 500L151 510M175 500L171 510M195 500L191 510M215 500L211 510M235 500L231 510M255 500L251 510M275 500L271 510M295 500L291 510M315 500L311 510M335 500L331 510M355 500L351 510M375 500L371 510M395 500L391 510M415 500L411 510M435 500L431 510M455 500L451 510M475 500L471 510" stroke="#DDB6A7" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <path d="M82 355C48 276 103 241 125 226C185 181 142 134 111 153C85 170 132 192 158 166C183 142 172 94 226 78" stroke="#CE9E9F" stroke-width="2.5" stroke-dasharray="3 10" stroke-linecap="round"/>
+  <g filter="url(#shadow)" transform="rotate(7 305 326)" stroke="#98715B" stroke-linejoin="round">
+    <path d="M141 285L294 174C301 168 310 168 318 174L472 285V456C472 468 463 476 452 476H161C150 476 141 468 141 456Z" fill="#EAB8BE" stroke-width="2.8"/>
+    <path d="M141 285L307 405L472 285" stroke="#BF8D87" stroke-width="2.2"/>
+    <g transform="rotate(-11 306 260)">
+      <rect x="184" y="112" width="248" height="280" rx="9" fill="url(#paper)" stroke-width="2.5"/>
+      <rect x="196" y="124" width="224" height="256" rx="5" stroke="#D8B99D" stroke-width="1.2" stroke-dasharray="2 6"/>
+      <path d="M226 187H329M226 205H365M226 223H346" stroke="#C9A78C" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+      <path d="M228 263C246 246 260 282 280 263C300 246 312 281 332 264C345 253 358 261 368 269" stroke="#DC9EB0" stroke-width="3" stroke-linecap="round"/>
+      <path d="M228 304H344M228 323H313" stroke="#C9A78C" stroke-width="4" stroke-linecap="round" opacity=".38"/>
+      <path d="M347 134L377 139L372 165L343 160Z" fill="#E4ECD9" stroke="#A4B38D" stroke-width="1.8"/>
+      <use href="#daisy" xlink:href="#daisy" transform="translate(360 149) scale(.43)"/>
+    </g>
+    <path d="M141 285L285 377C299 386 314 386 328 377L472 285V456C472 468 463 476 452 476H161C150 476 141 468 141 456Z" fill="url(#envelope)" stroke-width="2.8"/>
+    <path d="M147 465L261 366M466 465L352 366" stroke="#C99199" stroke-width="2"/>
+    <path d="M157 447V309M456 309V447" stroke="#FFF0ED" stroke-width="2" stroke-linecap="round"/>
+    <path d="M288 369L276 432L301 419L322 436L332 371" fill="#E7BD7A" stroke="#AE875B" stroke-width="1.9"/>
+    <path d="M304 374L299 418M315 376L315 418" stroke="#F6DFAC" stroke-width="2"/>
+    <path d="M306 339C319 329 326 338 333 341C347 341 348 353 352 361C362 371 354 379 351 386C353 399 341 402 332 406C324 416 313 411 306 408C292 413 286 405 279 401C265 399 266 387 263 378C254 367 265 358 268 351C270 338 283 340 291 336C298 332 301 336 306 339Z" fill="#D88B9E" stroke="#A96D7B" stroke-width="2.1"/>
+    <circle cx="307" cy="373" r="31" stroke="#EDB3C0" stroke-width="2"/>
+    <use href="#daisy" xlink:href="#daisy" transform="translate(307 373) scale(.86)"/>
+  </g>
+  <g transform="translate(468 182) rotate(17)">
+    <path d="M-3 35C10 13 13-4 3-30" stroke="#A9B494" stroke-width="3" stroke-linecap="round"/>
+    <path d="M7 2C-17 0-21-13-16-23C-3-21 7-11 7 2ZM9 9C29 0 35 9 32 17C22 23 14 17 9 9Z" fill="#C5D0B7" stroke="#9EAC88" stroke-width="1.6"/>
+    <use href="#daisy" xlink:href="#daisy" transform="translate(0 -37) rotate(9) scale(1.15)"/>
+  </g>
+  <use href="#daisy" xlink:href="#daisy" transform="translate(102 430) rotate(-18) scale(.63)"/>
+  <use href="#daisy" xlink:href="#daisy" transform="translate(437 487) rotate(13) scale(.52)"/>
+  <use href="#spark" xlink:href="#spark" transform="translate(417 91) rotate(9)"/>
+  <use href="#spark" xlink:href="#spark" transform="translate(491 365) scale(.8)"/>
+  <use href="#spark" xlink:href="#spark" transform="translate(126 117) scale(.65)"/>
+  <circle cx="492" cy="253" r="4" fill="#E1B1B3"/><circle cx="87" cy="386" r="3" fill="#B9C5A7"/><circle cx="383" cy="80" r="4" fill="#E7C78D"/>
+</svg>

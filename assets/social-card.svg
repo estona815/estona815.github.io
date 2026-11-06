@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">치이카와 덕력고사 · 우리들의 덕력 소풍</title>
+  <desc id="desc">연분홍 체크 바탕의 크림색 카드. 치이카와 덕력고사라는 제목과 직접 그린 꽃 인장 초대장, 랜덤 20문제 안내가 있는 비공식 팬 퀴즈 공유 이미지.</desc>
+  <defs>
+    <pattern id="gingham" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M0 12H48M12 0V48" stroke="#ECC3CC" stroke-width="24" opacity=".3"/></pattern>
+    <linearGradient id="paper" x1="745" y1="174" x2="906" y2="433" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFDF5"/><stop offset="1" stop-color="#FFF0D9"/></linearGradient>
+    <linearGradient id="envelope" x1="842" y1="290" x2="852" y2="479" gradientUnits="userSpaceOnUse"><stop stop-color="#F4CDD7"/><stop offset="1" stop-color="#E7ACBF"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-25%" width="150%" height="170%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset in="blur" dx="0" dy="9" result="offset"/><feFlood flood-color="#A06F57" flood-opacity=".13"/><feComposite in2="offset" operator="in" result="shade"/><feMerge><feMergeNode in="shade"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <g id="flower"><path d="M0-14C-11-31 11-31 0-14C15-29 29-8 11-5C33 0 22 20 10 8C23 29-2 33-1 15C-9 34-29 18-12 6C-32 12-28-14-11-7C-26-24-4-31 0-14Z" fill="#FFF8E6" stroke="#94705B" stroke-width="2"/><circle r="8" fill="#E8BF7E" stroke="#94705B" stroke-width="1.7"/></g>
+  </defs>
+  <rect width="1200" height="630" fill="#FAE9EB"/>
+  <rect width="1200" height="630" fill="url(#gingham)"/>
+  <rect x="43" y="43" width="1114" height="552" rx="23" fill="#A77960" opacity=".08"/>
+  <rect x="42" y="36" width="1116" height="552" rx="23" fill="#FFFAEE" stroke="#B3947D" stroke-width="2"/>
+  <rect x="57" y="51" width="1086" height="522" rx="15" stroke="#E5C4B1" stroke-width="1.5" stroke-dasharray="3 8"/>
+  <g font-family="Jua, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+    <text x="104" y="132" fill="#886658" font-size="27" letter-spacing="1">우리들의 덕력 소풍</text>
+    <path d="M104 151H303" stroke="#E3B2BF" stroke-width="3" stroke-linecap="round"/>
+    <text x="98" y="264" fill="#715141" font-size="88">치이카와</text>
+    <text x="98" y="368" fill="#BD708B" font-size="100">덕력고사</text>
+    <text x="104" y="429" fill="#8A6C5C" font-size="25">작은 초대장 한 장, 함께 떠나는 소풍.</text>
+    <rect x="104" y="469" width="271" height="48" rx="24" fill="#F8E1E8" stroke="#D9AFBB" stroke-width="1.4"/>
+    <text x="128" y="501" fill="#845666" font-size="23">랜덤 20문제 · 100점 만점</text>
+    <text x="104" y="551" fill="#9B7E6E" font-size="18">팬이 만든 비공식 퀴즈</text>
+  </g>
+  <path d="M654 213C623 157 663 121 692 135C719 148 693 176 675 158C651 133 687 95 741 99" stroke="#D6AAAC" stroke-width="2.5" stroke-dasharray="3 10" stroke-linecap="round"/>
+  <ellipse cx="872" cy="484" rx="193" ry="22" fill="#A37B61" opacity=".09"/>
+  <path d="M684 304C672 223 738 156 837 154C952 152 1039 211 1042 312C1045 411 972 472 871 480C762 486 693 410 684 304Z" fill="#F5E7DA" opacity=".55"/>
+  <g transform="rotate(8 862 324)" filter="url(#shadow)" stroke="#9B745F" stroke-linejoin="round">
+    <path d="M705 284L849 184C858 178 866 178 876 184L1020 284V454C1020 464 1011 472 1001 472H724C713 472 705 464 705 454Z" fill="#E9B7C2" stroke-width="2.6"/>
+    <g transform="rotate(-12 862 261)">
+      <rect x="750" y="137" width="227" height="240" rx="8" fill="url(#paper)" stroke-width="2.4"/>
+      <rect x="762" y="149" width="203" height="216" rx="4" stroke="#D9BC9F" stroke-width="1.2" stroke-dasharray="2 6"/>
+      <path d="M790 196H899M790 215H930M790 234H916" stroke="#CFAC90" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+      <path d="M791 270C811 251 824 288 845 269C864 252 878 286 899 269C911 260 920 266 929 271" stroke="#D89DAF" stroke-width="3" stroke-linecap="round"/>
+      <path d="M790 309H909M790 326H870" stroke="#C9A88E" stroke-width="3.5" stroke-linecap="round" opacity=".35"/>
+    </g>
+    <path d="M705 284L842 372C856 381 870 381 883 372L1020 284V454C1020 464 1011 472 1001 472H724C713 472 705 464 705 454Z" fill="url(#envelope)" stroke-width="2.6"/>
+    <path d="M711 461L818 357M1013 461L906 357" stroke="#BF8B96" stroke-width="2"/>
+    <path d="M843 366L831 432L856 417L874 435L887 368" fill="#E3BE7E" stroke="#AF895D" stroke-width="1.8"/>
+    <path d="M863 335L874 342L887 341L893 353L905 358L904 371L910 383L901 393L898 405L885 408L874 418L863 413L851 418L840 408L827 405L824 392L815 383L821 371L820 358L832 353L838 341L851 342Z" fill="#D68DAB" stroke="#A96F83" stroke-width="2"/>
+    <circle cx="863" cy="376" r="31" stroke="#E9B7CC" stroke-width="2"/>
+    <use href="#flower" xlink:href="#flower" transform="translate(863 376) scale(.79)"/>
+  </g>
+  <g transform="translate(1027 180) rotate(21)">
+    <path d="M0 0L8 55" stroke="#A4AE8C" stroke-width="2.7" stroke-linecap="round"/>
+    <path d="M5 30C-14 31-20 17-10 14C-1 15 4 24 5 30ZM7 39C28 34 31 21 21 20C13 23 8 32 7 39Z" fill="#C2CCAC" stroke="#A4AE8C" stroke-width="1.5"/>
+    <use href="#flower" xlink:href="#flower" transform="scale(.85)"/>
+  </g>
+  <use href="#flower" xlink:href="#flower" transform="translate(686 430) rotate(-14) scale(.65)"/>
+  <use href="#flower" xlink:href="#flower" transform="translate(1000 503) scale(.47)"/>
+  <path d="M972 111V128M963.5 119.5H980.5M1066 340V354M1059 347H1073" stroke="#B78C6F" stroke-width="2.3" stroke-linecap="round"/>
+  <circle cx="778" cy="102" r="3.5" fill="#D7A3AF"/><circle cx="1083" cy="272" r="4" fill="#BEC8AB"/>
+</svg>
