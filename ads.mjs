@@ -1,6 +1,8 @@
-// The publisher ID is verified; site approval, a live ad unit and a reviewed
-// consent adapter are still pending. JSON alone never activates advertising.
-const IMPLEMENTATION_REVIEWED = false;
+import { createGoogleConsentManager } from './google-cmp.mjs';
+
+// The native Google CMP adapter is implemented. Site approval, enabled and
+// consentReady remain separate deployment gates in ads-config.json.
+const IMPLEMENTATION_REVIEWED = true;
 const GOOGLE_SCRIPT = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
 // Only substantive, standalone editorial guides may host a manual ad unit.
 // Quiz, start, score, review and coupon screens must remain unsupported.
@@ -36,8 +38,6 @@ function hideSlot(slot) {
   slot.replaceChildren();
 }
 
-// The factory allows a future reviewed CMP integration and deterministic tests.
-// The production instance below deliberately supplies neither activation gate.
 export function createAdController({
   implementationReviewed = false,
   document: doc = globalThis.document,
@@ -46,26 +46,108 @@ export function createAdController({
     if (!response.ok) throw new Error('Ad configuration unavailable');
     return response.json();
   },
-  checkConsent = async () => false
+  readinessTimeoutMs = 15000,
+  scheduleTimeout = globalThis.setTimeout,
+  cancelTimeout = globalThis.clearTimeout
 } = {}) {
-  const runs = new WeakMap();
-  const mounted = new WeakSet();
-  let configPromise;
-  let scriptPromise;
-  let loadedPublisher;
+  const view = doc?.defaultView;
+  const consentListeners = new Set();
+  let configPromise, scriptPromise, loadedPublisher, consentManager;
+  let activeRun, target, renderedSlot, renderedRevision;
+  let scriptReady = false, runtimeStarted = false, requestAttempted = false;
+  let consentState = { status:'disabled', reason:'disabled', canRequestAds:false, canRevoke:false, revision:0 };
+
+  const current = candidate => candidate && candidate.run === activeRun &&
+    candidate.root.isConnected && candidate.slot.isConnected &&
+    candidate.root.contains(candidate.slot) &&
+    candidate.slot.getAttribute('data-ad-placement') === 'guide';
+
+  function pauseRequests() {
+    if (runtimeStarted) (view.adsbygoogle ||= []).pauseAdRequests = 1;
+  }
+  function removeRenderedAd() {
+    if (renderedSlot) hideSlot(renderedSlot);
+    renderedSlot = undefined;
+  }
+  function notifyConsent(state) {
+    consentState = state;
+    applyConsent();
+    for (const listener of consentListeners) listener(state);
+  }
+  function applyConsent() {
+    pauseRequests();
+    if (!consentState.canRequestAds || !current(target)) {
+      removeRenderedAd();
+      return 0;
+    }
+    if (!scriptReady) return 0;
+    if (requestAttempted) {
+      // Consent changes never refresh or replace an already requested unit.
+      if (renderedRevision !== consentState.revision) removeRenderedAd();
+      if (renderedSlot) view.adsbygoogle.pauseAdRequests = 0;
+      return 0;
+    }
+    const slot = target.slot;
+    try {
+      const label = doc.createElement('small');
+      label.className = 'ad-label';
+      label.textContent = '광고';
+      const unit = doc.createElement('ins');
+      unit.className = 'adsbygoogle';
+      unit.style.display = 'block';
+      unit.setAttribute('data-ad-client', target.publisherId);
+      unit.setAttribute('data-ad-slot', target.slotId);
+      unit.setAttribute('data-ad-format', 'auto');
+      unit.setAttribute('data-full-width-responsive', 'true');
+      slot.replaceChildren(label, unit);
+      slot.hidden = false;
+      slot.style.display = 'block';
+      renderedSlot = slot;
+      renderedRevision = consentState.revision;
+      // One attempt per page, including after a push error, DOM replacement or
+      // revocation. This latch is set before calling the external library.
+      requestAttempted = true;
+      view.adsbygoogle.push({});
+      // A synchronous CMP update during push must not be overwritten.
+      if (consentState.canRequestAds && current(target) &&
+          renderedSlot === slot && renderedRevision === consentState.revision) {
+        view.adsbygoogle.pauseAdRequests = 0;
+      } else {
+        pauseRequests();
+        removeRenderedAd();
+      }
+      return 1;
+    } catch {
+      pauseRequests();
+      hideSlot(slot);
+      renderedSlot = undefined;
+      return 0;
+    }
+  }
 
   function loadScript(publisherId) {
     if (scriptPromise) return loadedPublisher === publisherId ? scriptPromise : Promise.resolve(false);
     loadedPublisher = publisherId;
     scriptPromise = new Promise(resolve => {
       if (!doc?.head || doc.querySelector('script[data-deokryeok-adsense]')) { resolve(false); return; }
+      let finished = false;
       const script = doc.createElement('script');
+      const timer = scheduleTimeout(() => finish(false), readinessTimeoutMs);
+      function finish(ok) {
+        if (finished) return;
+        finished = true;
+        cancelTimeout(timer);
+        script.onload = script.onerror = null;
+        scriptReady = ok;
+        if (!ok) script.remove?.();
+        resolve(ok);
+      }
       script.async = true;
       script.crossOrigin = 'anonymous';
       script.setAttribute('data-deokryeok-adsense', 'manual');
-      script.src = `${GOOGLE_SCRIPT}?client=${publisherId}`;
-      script.onload = () => resolve(true);
-      script.onerror = () => resolve(false);
+      script.src = GOOGLE_SCRIPT + '?client=' + publisherId;
+      script.onload = () => finish(true);
+      script.onerror = () => finish(false);
       doc.head.appendChild(script);
     });
     return scriptPromise;
@@ -73,59 +155,72 @@ export function createAdController({
 
   async function mount(root, placement) {
     if (!root?.querySelectorAll) return { status:'invalid_root', mounted:0 };
-    const run = {};
-    runs.set(root, run);
     const allSlots = Array.from(root.querySelectorAll('[data-ad-placement]'));
     const slots = allSlots.filter(slot => slot.getAttribute('data-ad-placement') === placement);
     for (const slot of allSlots) {
-      if (!mounted.has(slot) || !PLACEMENTS.has(placement) || !slots.includes(slot)) hideSlot(slot);
+      if (slot !== renderedSlot || !PLACEMENTS.has(placement) || slot !== slots[0]) hideSlot(slot);
     }
-    if (!PLACEMENTS.has(placement)) return { status:'unsupported_screen', mounted:0 };
+    if (!PLACEMENTS.has(placement)) {
+      activeRun = undefined; target = undefined; pauseRequests(); removeRenderedAd();
+      return { status:'unsupported_screen', mounted:0 };
+    }
     if (implementationReviewed !== true) return { status:'implementation_not_reviewed', mounted:0 };
-    const current = slot => runs.get(root) === run && root.isConnected && slot.isConnected && root.contains(slot) && slot.getAttribute('data-ad-placement') === placement;
-    const pending = slots.filter(slot => !mounted.has(slot) && current(slot));
-    if (!pending.length) return { status:'no_new_slots', mounted:0 };
+    if (requestAttempted) {
+      if (renderedSlot !== slots[0] || !current(target)) { pauseRequests(); removeRenderedAd(); }
+      return { status:'no_new_slots', mounted:0 };
+    }
+    if (!slots.length) return { status:'no_new_slots', mounted:0 };
+    const candidate = { root, slot:slots[0], run:{} };
+    activeRun = candidate.run;
+    target = undefined;
+    if (!current(candidate)) return { status:'stale_screen', mounted:0 };
     try {
       configPromise ||= Promise.resolve().then(fetchConfig);
       const config = await configPromise;
-      if (!pending.some(current)) return { status:'stale_screen', mounted:0 };
+      if (!current(candidate)) return { status:'stale_screen', mounted:0 };
       const evaluated = evaluateAdConfig(config, placement, doc?.location?.origin);
       if (!evaluated.ready) return { status:evaluated.reason, mounted:0 };
-      // A real CMP must decide for this visitor before any Google request.
-      if (await checkConsent({ placement, origin:doc.location.origin }) !== true) return { status:'consent_not_granted', mounted:0 };
-      if (!pending.some(current)) return { status:'stale_screen', mounted:0 };
-      if (!await loadScript(evaluated.publisherId)) return { status:'script_unavailable', mounted:0 };
-      if (!pending.some(current)) return { status:'stale_screen', mounted:0 };
-      let count = 0;
-      for (const slot of pending.filter(current)) {
-        const label = doc.createElement('small');
-        label.className = 'ad-label';
-        label.textContent = '광고';
-        const unit = doc.createElement('ins');
-        unit.className = 'adsbygoogle';
-        unit.style.display = 'block';
-        unit.setAttribute('data-ad-client', evaluated.publisherId);
-        unit.setAttribute('data-ad-slot', evaluated.slotId);
-        unit.setAttribute('data-ad-format', 'auto');
-        unit.setAttribute('data-full-width-responsive', 'true');
-        slot.replaceChildren(label, unit);
-        slot.hidden = false;
-        slot.style.display = 'block';
-        try {
-          const view = doc.defaultView;
-          (view.adsbygoogle ||= []).push({});
-          mounted.add(slot);
-          count++;
-        } catch { hideSlot(slot); }
+      target = { ...candidate, publisherId:evaluated.publisherId, slotId:evaluated.slotId };
+      if (!runtimeStarted) {
+        if (!view) return { status:'unavailable', mounted:0 };
+        runtimeStarted = true;
+        // Pausing requests still loads Google scripts to bootstrap its CMP.
+        // https://support.google.com/adsense/answer/7670312
+        pauseRequests();
+        consentManager = createGoogleConsentManager({
+          window:view, onChange:notifyConsent, readinessTimeoutMs, scheduleTimeout, cancelTimeout
+        });
+        notifyConsent(consentManager.getState());
+        consentManager.start();
       }
-      return { status:count ? 'requested' : 'not_requested', mounted:count };
+      if (!await loadScript(evaluated.publisherId)) {
+        consentManager.stop('ad_script_unavailable');
+        return { status:'script_unavailable', mounted:0 };
+      }
+      if (!current(candidate)) { applyConsent(); return { status:'stale_screen', mounted:0 }; }
+      const mounted = applyConsent();
+      return { status:requestAttempted ? 'requested' : consentState.status, mounted };
     } catch {
-      for (const slot of pending.filter(current)) hideSlot(slot);
+      if (current(candidate)) {
+        pauseRequests(); removeRenderedAd(); hideSlot(candidate.slot);
+        consentManager?.stop('ad_runtime_error');
+      }
       return { status:'unavailable', mounted:0 };
     }
   }
-  return { mountAdSlots:mount };
+  function subscribeConsent(listener) {
+    consentListeners.add(listener);
+    listener(consentState);
+    return () => consentListeners.delete(listener);
+  }
+  return {
+    mountAdSlots:mount,
+    subscribeConsent,
+    openPrivacySettings:() => consentManager?.openSettings() === true
+  };
 }
 
 const controller = createAdController({ implementationReviewed:IMPLEMENTATION_REVIEWED });
 export const mountAdSlots = (root, placement) => controller.mountAdSlots(root, placement);
+export const subscribeAdConsent = listener => controller.subscribeConsent(listener);
+export const openAdPrivacySettings = () => controller.openPrivacySettings();

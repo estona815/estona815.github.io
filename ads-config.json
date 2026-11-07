@@ -7,8 +7,8 @@
   "approvedOrigin": null,
   "privacyReady": true,
   "consentReady": false,
-  "autoAdsDisabled": false,
+  "autoAdsDisabled": true,
   "placements": {
-    "guide": null
+    "guide": "1390756569"
   }
 }
